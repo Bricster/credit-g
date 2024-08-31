@@ -2,7 +2,7 @@ from typing import Any, List, Optional
 import datetime
 
 from pydantic import BaseModel
-from bikeshare_model.processing.validation import DataInputSchema
+from credit_model.processing.validation import DataInputSchema
 
 
 class PredictionResults(BaseModel):
@@ -20,19 +20,24 @@ class MultipleDataInputs(BaseModel):
             "example": {
                 "inputs": [
                     {
-                "dteday": "2012-11-05", # datetime.datetime.strptime("2012-11-05", "%Y-%m-%d"),  
-                "season": "winter", 
-                "hr": "6am",
-                "holiday": "No", 
-                "weekday": "Mon",
-                "workingday": "Yes",
-                "weathersit": "Mist",
-                "temp": 6.10,
-                "atemp": 3.0014,
-                "hum": 19.0012,	
-                "windspeed": 19.0012,
-                "yr": 2012,
-                "mnth": "November",
+                "checking_status": "no checking",   
+                "duration": 12, 
+                "credit_history": "critical/other existing credit",
+                "purpose": "education", 
+                "credit_amount": 2096,
+                "savings_status": "<100",
+                "employment": "4<=X<7",
+                "installment_commitment": 2,
+                "personal_status": "male single",
+                "other_parties": "none",	
+                "residence_since": 3,
+                "property_magnitude": "real estate",
+                "age": 3,
+                "other_payment_plans": "none",
+                "housing": "own",
+                "existing_credits": 2,
+                "job": "unskilled resident",
+                "num_dependents": 2,
                     }
                 ]
             }

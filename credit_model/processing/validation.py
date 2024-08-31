@@ -36,7 +36,6 @@ def validate_inputs(*, input_df: pd.DataFrame) -> Tuple[pd.DataFrame, Optional[d
 class DataInputSchema(BaseModel):
     checking_status: Optional[str]
     duration: Optional[int]
-    hr: Optional[str]
     credit_history: Optional[str]
     purpose: Optional[str]
     credit_amount: Optional[int]
