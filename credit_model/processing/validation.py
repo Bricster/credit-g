@@ -6,7 +6,6 @@ sys.path.append(str(root))
 
 from typing import List, Optional, Tuple, Union
 
-from datetime import datetime
 import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ValidationError
@@ -41,17 +40,17 @@ class DataInputSchema(BaseModel):
     credit_amount: Optional[int]
     savings_status: Optional[str]
     employment: Optional[str]
-    installment_commitment: Optional[str]
+    installment_commitment: Optional[int]
     personal_status: Optional[str]
     other_parties: Optional[str]
-    residence_since: Optional[str]
+    residence_since: Optional[int]
     property_magnitude: Optional[str]
     age: Optional[int]
     other_payment_plans: Optional[str]
     housing: Optional[str]
-    existing_credits: Optional[str]
+    existing_credits: Optional[int]
     job: Optional[str]
-    num_dependents: Optional[str]
+    num_dependents: Optional[int]
 
 
 class MultipleDataInputs(BaseModel):
