@@ -47,23 +47,23 @@ class ModelConfig(BaseModel):
     unused_fields: List[str]
     
     checking_status: str
-    duration: int
+    duration: float
     credit_history: str
     purpose: str
-    credit_amount: int
+    credit_amount: float
     savings_status: str
     employment: str
-    installment_commitment: int
+    installment_commitment: float
     personal_status: str
     other_parties: str
-    residence_since: int
+    residence_since: float
     property_magnitude: str
-    age: int
+    age: float
     other_payment_plans: str
     housing: str
-    existing_credits: int
+    existing_credits: float
     job: str
-    num_dependents: int
+    num_dependents: float
         
     checking_mapping: Dict[str, int]
     credit_mappings: Dict[str, int]
@@ -109,8 +109,7 @@ def fetch_config_from_yaml(cfg_path: Path = None) -> YAML:
     if cfg_path:
         with open(cfg_path, "r") as conf_file:
             parsed_config = load(conf_file.read())
-            return parsed_config
-        
+            return parsed_config      
     raise OSError(f"Did not find config file at path: {cfg_path}")
 
 
